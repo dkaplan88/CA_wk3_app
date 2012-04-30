@@ -1,0 +1,14 @@
+<h1 style="text-align:center">Dan's Restaurant Menu</h1>
+<h2>Items</h2>
+
+<p><a href="http://localhost:3000/items/new">Add an Item</a></p>
+<% @item.each do |item| %>
+
+<li><a href= "http://localhost:3000/items/<%= item.id %>" >
+<%= item.name %> : $<%= item.price %></a>
+|
+<a href="http://localhost:3000/items/<%= item.id %>/edit">Edit</a>
+|
+<%= link_to "Delete", "http://localhost:3000/items/#{item.id}", :method => :delete %>
+</li>
+<% end %>

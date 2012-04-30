@@ -1,0 +1,8 @@
+<h1>Add an Item</h1>
+<%= form_tag "http://localhost:3000/items/create" do %>
+<%= label_tag "Name" %>
+<%= text_field_tag "name" %>
+<%= label_tag "Price" %>
+<%= text_field_tag "price"  %>
+<%= submit_tag "Add Item" %>
+<% end %>
